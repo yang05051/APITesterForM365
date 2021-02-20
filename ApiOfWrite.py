@@ -90,7 +90,7 @@ def apiReq(method,a,url,data='QAQ'):
 
 #上传文件到onedrive(小于4M)
 def uploadFile(a,filesname,f):
-    url=r'https://graph.microsoft.com/v1.0/me/drive/root:/AutoApi/App'+str(a)+r'/'+filesname+r':/content'
+    url=r'https://graph.microsoft.com/v1.0/me/drive/root:/.APITester/'+filesname+r':/content'
     apiReq('put',a,url,f)
     
         
@@ -112,20 +112,20 @@ def sendEmail(a,subject,content):
 def excelWrite(a,filesname,sheet):
     try:
         print('    添加工作表')
-        url=r'https://graph.microsoft.com/v1.0/me/drive/root:/AutoApi/App'+str(a)+r'/'+filesname+r':/workbook/worksheets/add'
+        url=r'https://graph.microsoft.com/v1.0/me/drive/root:/.APITester/'+filesname+r':/workbook/worksheets/add'
         data={
              "name": sheet
              }
         apiReq('post',a,url,json.dumps(data))
         print('    添加表格')
-        url=r'https://graph.microsoft.com/v1.0/me/drive/root:/AutoApi/App'+str(a)+r'/'+filesname+r':/workbook/worksheets/'+sheet+r'/tables/add'
+        url=r'https://graph.microsoft.com/v1.0/me/drive/root:/.APITester/'+filesname+r':/workbook/worksheets/'+sheet+r'/tables/add'
         data={
              "address": "A1:D8",
              "hasHeaders": False
              }
         jsontxt=json.loads(apiReq('post',a,url,json.dumps(data)))
         print('    添加行')
-        url=r'https://graph.microsoft.com/v1.0/me/drive/root:/AutoApi/App'+str(a)+r'/'+filesname+r':/workbook/tables/'+jsontxt['id']+r'/rows/add'
+        url=r'https://graph.microsoft.com/v1.0/me/drive/root:/.APITester/'+filesname+r':/workbook/tables/'+jsontxt['id']+r'/rows/add'
         rowsvalues=[[0]*4]*2
         for v1 in range(0,2):
             for v2 in range(0,4):
