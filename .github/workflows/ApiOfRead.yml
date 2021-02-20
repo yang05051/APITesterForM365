@@ -1,8 +1,8 @@
-#查询系列api，每6小时调用一次（周六日不启动）
 name: Test Read API
 
 on: 
   repository_dispatch:
+  workflow_dispatch:
    
 jobs:
   build:
