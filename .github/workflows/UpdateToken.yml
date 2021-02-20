@@ -15,7 +15,7 @@ jobs:
       run: |
         pip install requests
         pip install PyNaCl
-    - name: update secrets #更新token到secret
+    - name: Update token #更新token到secret
       env: 
         #github的账号信息
         GH_TOKEN: ${{ secrets.GH_TOKEN }} 
