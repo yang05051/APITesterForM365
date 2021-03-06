@@ -6,6 +6,6 @@
 
 [![Update Token](https://github.com/yang05051/APITesterForM365/actions/workflows/UpdateToken.yml/badge.svg)](https://github.com/yang05051/APITesterForM365/actions/workflows/UpdateToken.yml)
 
-**Forked from:** *~~[wangziyingwen/AutoApi](https://github.com/wangziyingwen/AutoApi)~~ (Deleted by its author)*
+**Forked from:** *~~[wangziyingwen/AutoApi](https://github.com/wangziyingwen/AutoApi)~~ (Deleted by its owner)*
 
-**Author:** [wangziyingwen](https://github.com/wangziyingwen)
+**Contributor:** [wangziyingwen](https://github.com/wangziyingwen)
