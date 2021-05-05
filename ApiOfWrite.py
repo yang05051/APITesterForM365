@@ -271,7 +271,7 @@ if len(other_config['email']) <= 1:
     city='Beijing'
 else:
     city=other_config['email'][1]
-headers={'Accept-Language': 'zh-CN'}
+headers={'Accept-Language': 'en-US'}
 weather=req.get(r'http://wttr.in/'+city+r'?format=4&?m',headers=headers).text
 
 #实际运行
